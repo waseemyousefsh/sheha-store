@@ -1,40 +1,438 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* =========================
-       إعدادات المتجر
-    ========================= */
-
     const WHATSAPP_NUMBER = "963933955690";
-
     const STORAGE_KEY = "sheha_cart";
+    const LANGUAGE_KEY = "sheha_language";
 
 
-    /* =========================
-       عناصر الصفحة
-    ========================= */
+    const translations = {
+
+        ar: {
+
+            home: "الرئيسية",
+            products: "المنتجات",
+            about: "من نحن",
+            contact: "تواصل معنا",
+            cart: "السلة",
+
+            companyName: "شركة شيحه",
+
+            heroTitle:
+                "استيراد و تجارة عموم الأدوات الصحية و الطاقة الشمسية",
+
+            heroText:
+                "جودة مناسبة • أسعار واضحة • طلب سريع",
+
+            browseProducts:
+                "تصفح المنتجات",
+
+            whatsapp:
+                "واتساب",
+
+            feature1Title:
+                "منتجات متنوعة",
+
+            feature1Text:
+                "خيارات متعددة",
+
+            feature2Title:
+                "أسعار واضحة",
+
+            feature2Text:
+                "الأسعار بالدولار",
+
+            feature3Title:
+                "طلب عبر واتساب",
+
+            feature3Text:
+                "تواصل سريع",
+
+            ourProducts:
+                "منتجاتنا",
+
+            productsText:
+                "اختر المنتج وأضفه إلى سلة المشتريات",
+
+            search:
+                "ابحث عن منتج...",
+
+            all:
+                "الكل",
+
+            sugar:
+                "سكر",
+
+            pumps:
+                "مضخات",
+
+            faucets:
+                "حنفيات",
+
+            mixers:
+                "خلاطات",
+
+            other:
+                "أخرى",
+
+            noResults:
+                "لم يتم العثور على منتج مطابق.",
+
+            aboutUs:
+                "من نحن",
+
+            aboutTitle:
+                "شركة شيحه",
+
+            aboutText:
+                "شركة شيحه SHEHA CO متخصصة في استيراد وتجارة عموم الأدوات الصحية والطاقة الشمسية. نعمل على توفير منتجات متنوعة وأسعار واضحة مع إمكانية الطلب والتواصل مباشرة عبر واتساب.",
+
+            whyUs:
+                "لماذا تختارنا؟",
+
+            why1Title:
+                "تنوع المنتجات",
+
+            why1Text:
+                "مجموعة متنوعة من المنتجات.",
+
+            why2Title:
+                "أسعار واضحة",
+
+            why2Text:
+                "معرفة سعر المنتج قبل الطلب.",
+
+            why3Title:
+                "طلب سهل",
+
+            why3Text:
+                "اطلب مباشرة عبر واتساب.",
+
+            why4Title:
+                "تواصل سريع",
+
+            why4Text:
+                "تواصل مباشر مع الشركة.",
+
+            contactUs:
+                "تواصل معنا",
+
+            contactTitle:
+                "هل لديك استفسار؟",
+
+            contactText:
+                "أرسل لنا اسم المنتج أو طلبك.",
+
+            contactWhatsapp:
+                "تواصل معنا عبر واتساب",
+
+            syria:
+                "سوريا",
+
+            rights:
+                "جميع الحقوق محفوظة",
+
+            cartTitle:
+                "سلة المشتريات",
+
+            emptyCart:
+                "السلة فارغة حاليًا.",
+
+            total:
+                "الإجمالي",
+
+            sendOrder:
+                "إرسال الطلب عبر واتساب",
+
+            clearCart:
+                "تفريغ السلة",
+
+            addToCart:
+                "أضف للسلة",
+
+            remove:
+                "حذف المنتج",
+
+            increase:
+                "زيادة",
+
+            decrease:
+                "إنقاص",
+
+            orderMessage:
+                "مرحباً شركة شيحه\n\nأرغب بطلب المنتجات التالية:\n\n",
+
+            totalMessage:
+                "\nالإجمالي: $"
+
+        },
+
+
+        en: {
+
+            home:
+                "Home",
+
+            products:
+                "Products",
+
+            about:
+                "About Us",
+
+            contact:
+                "Contact",
+
+            cart:
+                "Cart",
+
+            companyName:
+                "Sheha Company",
+
+            heroTitle:
+                "Import and General Trading of Sanitary Ware and Solar Energy",
+
+            heroText:
+                "Quality products • Clear prices • Fast ordering",
+
+            browseProducts:
+                "Browse Products",
+
+            whatsapp:
+                "WhatsApp",
+
+            feature1Title:
+                "Various Products",
+
+            feature1Text:
+                "Multiple options",
+
+            feature2Title:
+                "Clear Prices",
+
+            feature2Text:
+                "Prices in USD",
+
+            feature3Title:
+                "WhatsApp Orders",
+
+            feature3Text:
+                "Fast communication",
+
+            ourProducts:
+                "Our Products",
+
+            productsText:
+                "Choose a product and add it to your shopping cart",
+
+            search:
+                "Search for a product...",
+
+            all:
+                "All",
+
+            sugar:
+                "Sugar",
+
+            pumps:
+                "Pumps",
+
+            faucets:
+                "Faucets",
+
+            mixers:
+                "Mixers",
+
+            other:
+                "Other",
+
+            noResults:
+                "No matching product was found.",
+
+            aboutUs:
+                "About Us",
+
+            aboutTitle:
+                "Sheha Company",
+
+            aboutText:
+                "SHEHA CO specializes in importing and general trading of sanitary ware and solar energy products. We offer a variety of products, clear prices and direct ordering through WhatsApp.",
+
+            whyUs:
+                "Why Choose Us?",
+
+            why1Title:
+                "Product Variety",
+
+            why1Text:
+                "A variety of products and options.",
+
+            why2Title:
+                "Clear Prices",
+
+            why2Text:
+                "Know the product price before ordering.",
+
+            why3Title:
+                "Easy Ordering",
+
+            why3Text:
+                "Order directly through WhatsApp.",
+
+            why4Title:
+                "Fast Communication",
+
+            why4Text:
+                "Direct communication with the company.",
+
+            contactUs:
+                "Contact Us",
+
+            contactTitle:
+                "Have a Question?",
+
+            contactText:
+                "Send us the product name or your request.",
+
+            contactWhatsapp:
+                "Contact Us via WhatsApp",
+
+            syria:
+                "Syria",
+
+            rights:
+                "All rights reserved",
+
+            cartTitle:
+                "Shopping Cart",
+
+            emptyCart:
+                "Your cart is currently empty.",
+
+            total:
+                "Total",
+
+            sendOrder:
+                "Send Order via WhatsApp",
+
+            clearCart:
+                "Clear Cart",
+
+            addToCart:
+                "Add to Cart",
+
+            remove:
+                "Remove",
+
+            increase:
+                "Increase",
+
+            decrease:
+                "Decrease",
+
+            orderMessage:
+                "Hello Sheha Company,\n\nI would like to order the following products:\n\n",
+
+            totalMessage:
+                "\nTotal: $"
+
+        }
+
+    };
+
+
+    const products = [
+
+        {
+            id: 1,
+            name: "سكر عصفورة",
+            nameEn: "Asfoura Sugar",
+            price: 1,
+            category: "سكر",
+            categoryEn: "Sugar",
+            description: "منتج سكر عصفورة",
+            descriptionEn: "Asfoura sugar product",
+            image: "images/product1.jpg"
+        },
+
+        {
+            id: 2,
+            name: "مضخة 1/2 حصان",
+            nameEn: "1/2 HP Water Pump",
+            price: 28,
+            category: "مضخات",
+            categoryEn: "Pumps",
+            description: "مضخة مياه بقوة 1/2 حصان",
+            descriptionEn: "1/2 horsepower water pump",
+            image: "images/product2.jpg"
+        },
+
+        {
+            id: 3,
+            name: "حنفية بلاستيك كريستال",
+            nameEn: "Crystal Plastic Faucet",
+            price: 0.75,
+            category: "حنفيات",
+            categoryEn: "Faucets",
+            description: "حنفية بلاستيك بتصميم كريستال",
+            descriptionEn: "Crystal design plastic faucet",
+            image: "images/product3.jpg"
+        },
+
+        {
+            id: 4,
+            name: "خلاط حمام كوستا",
+            nameEn: "Costa Bathroom Mixer",
+            price: 20,
+            category: "خلاطات",
+            categoryEn: "Mixers",
+            description: "خلاط حمام كوستا",
+            descriptionEn: "Costa bathroom mixer",
+            image: "images/product4.png"
+        }
+
+    ];
+
+
+    for (let i = 5; i <= 50; i++) {
+
+        products.push({
+
+            id: i,
+
+            name: `منتج ${i}`,
+
+            nameEn: `Product ${i}`,
+
+            price: 0,
+
+            category: "أخرى",
+
+            categoryEn: "Other",
+
+            description:
+                `منتج رقم ${i} - يمكنك تعديل الاسم والسعر`,
+
+            descriptionEn:
+                `Product ${i} - you can edit the name and price`,
+
+            image:
+                `images/product${i}.jpg`
+
+        });
+
+    }
+
+
+    const productsGrid =
+        document.getElementById("productsGrid");
 
     const searchInput =
         document.getElementById("searchInput");
-
-    const products =
-        Array.from(
-            document.querySelectorAll(".product-card")
-        );
-
-    const categoryButtons =
-        document.querySelectorAll(".category");
 
     const noResults =
         document.getElementById("noResults");
 
     const cartCount =
         document.getElementById("cartCount");
-
-    const openCartButton =
-        document.getElementById("openCartButton");
-
-    const closeCartButton =
-        document.getElementById("closeCartButton");
 
     const cartOverlay =
         document.getElementById("cartOverlay");
@@ -48,167 +446,398 @@ document.addEventListener("DOMContentLoaded", function () {
     const cartTotal =
         document.getElementById("cartTotal");
 
-    const whatsappCartButton =
-        document.getElementById("whatsappCartButton");
-
-    const clearCartButton =
-        document.getElementById("clearCartButton");
-
     const year =
         document.getElementById("year");
 
+    const languageButton =
+        document.getElementById("languageButton");
 
-    /* =========================
-       السنة
-    ========================= */
-
-    if (year) {
-
-        year.textContent =
-            new Date().getFullYear();
-
-    }
+    const categoryButtons =
+        document.querySelectorAll(".category");
 
 
-    /* =========================
-       السلة
-    ========================= */
+    let currentLanguage =
+        localStorage.getItem(LANGUAGE_KEY) || "ar";
+
+    let selectedCategory =
+        "all";
 
     let cart = [];
 
     try {
 
-        const savedCart =
+        const saved =
             localStorage.getItem(STORAGE_KEY);
 
         cart =
-            savedCart
-                ? JSON.parse(savedCart)
-                : [];
+            saved ? JSON.parse(saved) : [];
 
         if (!Array.isArray(cart)) {
             cart = [];
         }
 
-    } catch (error) {
+    } catch {
 
         cart = [];
 
     }
 
 
-    /* =========================
-       حفظ السلة
-    ========================= */
-
     function saveCart() {
 
-        try {
-
-            localStorage.setItem(
-                STORAGE_KEY,
-                JSON.stringify(cart)
-            );
-
-        } catch (error) {
-
-            console.log(
-                "تعذر حفظ السلة"
-            );
-
-        }
+        localStorage.setItem(
+            STORAGE_KEY,
+            JSON.stringify(cart)
+        );
 
     }
 
 
-    /* =========================
-       تحديث عدد المنتجات
-    ========================= */
+    function escapeHtml(text) {
 
-    function updateCartCount() {
+        const div =
+            document.createElement("div");
 
-        const count =
-            cart.reduce(
-                function (total, item) {
+        div.textContent = text;
 
-                    return total + item.quantity;
-
-                },
-                0
-            );
-
-        if (cartCount) {
-
-            cartCount.textContent = count;
-
-        }
+        return div.innerHTML;
 
     }
 
 
-    /* =========================
-       حساب الإجمالي
-    ========================= */
+    function applyLanguage() {
 
-    function calculateTotal() {
+        const t =
+            translations[currentLanguage];
+
+        const isEnglish =
+            currentLanguage === "en";
+
+
+        document.documentElement.lang =
+            currentLanguage;
+
+        document.documentElement.dir =
+            isEnglish ? "ltr" : "rtl";
+
+        document.body.classList.toggle(
+            "ltr",
+            isEnglish
+        );
+
+
+        document
+            .querySelectorAll("[data-i18n]")
+            .forEach(element => {
+
+                const key =
+                    element.dataset.i18n;
+
+                if (t[key] !== undefined) {
+
+                    element.textContent =
+                        t[key];
+
+                }
+
+            });
+
+
+        document
+            .querySelectorAll(
+                "[data-i18n-placeholder]"
+            )
+            .forEach(element => {
+
+                const key =
+                    element.dataset.i18nPlaceholder;
+
+                if (t[key] !== undefined) {
+
+                    element.placeholder =
+                        t[key];
+
+                }
+
+            });
+
+
+        languageButton.textContent =
+            isEnglish
+                ? "العربية"
+                : "English";
+
+
+        document.title =
+            isEnglish
+                ? "SHEHA CO | Sheha Company"
+                : "SHEHA CO | شركة شيحه";
+
+
+        renderProducts();
+
+        renderCart();
+
+    }
+
+
+    function renderProducts() {
+
+        productsGrid.innerHTML = "";
+
+
+        const isEnglish =
+            currentLanguage === "en";
+
+
+        products.forEach(product => {
+
+            const card =
+                document.createElement("article");
+
+
+            card.className =
+                "product-card";
+
+
+            const name =
+                isEnglish
+                    ? product.nameEn
+                    : product.name;
+
+
+            const category =
+                isEnglish
+                    ? product.categoryEn
+                    : product.category;
+
+
+            const description =
+                isEnglish
+                    ? product.descriptionEn
+                    : product.description;
+
+
+            card.dataset.name =
+                name.toLowerCase();
+
+            card.dataset.category =
+                product.category;
+
+
+            card.innerHTML = `
+
+                <div class="product-image">
+
+                    <img
+                        src="${product.image}"
+                        alt="${escapeHtml(name)}"
+                        loading="lazy">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        ${escapeHtml(category)}
+                    </span>
+
+
+                    <h3>
+                        ${escapeHtml(name)}
+                    </h3>
+
+
+                    <p>
+                        ${escapeHtml(description)}
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            $${Number(product.price).toFixed(2)}
+                        </strong>
+
+
+                        <button
+                            class="add-to-cart"
+                            type="button"
+                            data-id="${product.id}">
+
+                            ${translations[currentLanguage].addToCart}
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            productsGrid.appendChild(card);
+
+        });
+
+
+        document
+            .querySelectorAll(".add-to-cart")
+            .forEach(button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        addToCart(
+                            Number(button.dataset.id)
+                        );
+
+                    }
+                );
+
+            });
+
+
+        filterProducts();
+
+    }
+
+
+    function addToCart(id) {
+
+        const product =
+            products.find(
+                item => item.id === id
+            );
+
+
+        if (!product) return;
+
+
+        const existing =
+            cart.find(
+                item => item.id === id
+            );
+
+
+        if (existing) {
+
+            existing.quantity++;
+
+        } else {
+
+            cart.push({
+
+                id: product.id,
+
+                name: product.name,
+
+                nameEn: product.nameEn,
+
+                price: Number(product.price),
+
+                quantity: 1
+
+            });
+
+        }
+
+
+        saveCart();
+
+        renderCart();
+
+        openCart();
+
+    }
+
+
+    function getTotal() {
 
         return cart.reduce(
-            function (total, item) {
-
-                return total +
-                    (item.price * item.quantity);
-
-            },
+            (total, item) =>
+                total +
+                Number(item.price) *
+                Number(item.quantity),
             0
         );
 
     }
 
 
-    /* =========================
-       عرض السلة
-    ========================= */
+    function updateCartCount() {
+
+        const count =
+            cart.reduce(
+                (total, item) =>
+                    total +
+                    Number(item.quantity),
+                0
+            );
+
+
+        cartCount.textContent =
+            count;
+
+    }
+
 
     function renderCart() {
 
-        if (!cartItems) {
-            return;
-        }
-
         cartItems.innerHTML = "";
+
+        const t =
+            translations[currentLanguage];
+
+        const isEnglish =
+            currentLanguage === "en";
+
 
         if (cart.length === 0) {
 
-            if (emptyCart) {
-                emptyCart.style.display = "block";
-            }
+            emptyCart.style.display =
+                "block";
 
         } else {
 
-            if (emptyCart) {
-                emptyCart.style.display = "none";
-            }
+            emptyCart.style.display =
+                "none";
 
 
             cart.forEach(
-                function (item, index) {
+                (item, index) => {
 
-                    const itemElement =
+                    const element =
                         document.createElement("div");
 
-                    itemElement.className =
+
+                    element.className =
                         "cart-item";
 
-                    itemElement.innerHTML = `
+
+                    const itemName =
+                        isEnglish
+                            ? item.nameEn
+                            : item.name;
+
+
+                    const subtotal =
+                        Number(item.price) *
+                        Number(item.quantity);
+
+
+                    element.innerHTML = `
 
                         <div>
 
                             <h3>
-                                ${escapeHtml(item.name)}
+                                ${escapeHtml(itemName)}
                             </h3>
 
                             <div class="cart-item-price">
-                                $${item.price.toFixed(2)}
+                                $${Number(item.price).toFixed(2)}
                             </div>
 
                             <div class="quantity-controls">
@@ -238,23 +867,21 @@ document.addEventListener("DOMContentLoaded", function () {
                                 class="remove-item"
                                 data-action="remove"
                                 data-index="${index}">
-                                حذف المنتج
+
+                                ${t.remove}
+
                             </button>
 
                         </div>
 
                         <strong>
-                            $${(
-                                item.price *
-                                item.quantity
-                            ).toFixed(2)}
+                            $${subtotal.toFixed(2)}
                         </strong>
 
                     `;
 
-                    cartItems.appendChild(
-                        itemElement
-                    );
+
+                    cartItems.appendChild(element);
 
                 }
             );
@@ -262,12 +889,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        if (cartTotal) {
+        cartTotal.textContent =
+            getTotal().toFixed(2);
 
-            cartTotal.textContent =
-                calculateTotal().toFixed(2);
-
-        }
 
         updateCartCount();
 
@@ -276,269 +900,98 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =========================
-       حماية النص
-    ========================= */
+    cartItems.addEventListener(
+        "click",
+        function (event) {
 
-    function escapeHtml(text) {
+            const button =
+                event.target.closest("button");
 
-        const div =
-            document.createElement("div");
-
-        div.textContent = text;
-
-        return div.innerHTML;
-
-    }
+            if (!button) return;
 
 
-    /* =========================
-       إضافة منتج للسلة
-    ========================= */
+            const action =
+                button.dataset.action;
 
-    function addToCart(name, price) {
+            const index =
+                Number(button.dataset.index);
 
-        const existing =
-            cart.find(
-                function (item) {
 
-                    return item.name === name;
+            if (!cart[index]) return;
+
+
+            if (action === "increase") {
+
+                cart[index].quantity++;
+
+            }
+
+
+            if (action === "decrease") {
+
+                cart[index].quantity--;
+
+                if (cart[index].quantity <= 0) {
+
+                    cart.splice(index, 1);
 
                 }
-            );
 
-        if (existing) {
+            }
 
-            existing.quantity += 1;
 
-        } else {
+            if (action === "remove") {
 
-            cart.push({
+                cart.splice(index, 1);
 
-                name: name,
+            }
 
-                price: Number(price),
 
-                quantity: 1
-
-            });
+            renderCart();
 
         }
+    );
 
-        renderCart();
-
-        openCart();
-
-    }
-
-
-    /* =========================
-       أزرار إضافة للسلة
-    ========================= */
-
-    document
-        .querySelectorAll(".add-to-cart")
-        .forEach(
-            function (button) {
-
-                button.addEventListener(
-                    "click",
-                    function () {
-
-                        const name =
-                            button.dataset.name;
-
-                        const price =
-                            Number(
-                                button.dataset.price
-                            );
-
-                        addToCart(
-                            name,
-                            price
-                        );
-
-                    }
-                );
-
-            }
-        );
-
-
-    /* =========================
-       التحكم بالسلة
-    ========================= */
-
-    if (cartItems) {
-
-        cartItems.addEventListener(
-            "click",
-            function (event) {
-
-                const button =
-                    event.target.closest(
-                        "button"
-                    );
-
-                if (!button) {
-                    return;
-                }
-
-                const action =
-                    button.dataset.action;
-
-                const index =
-                    Number(
-                        button.dataset.index
-                    );
-
-                if (
-                    Number.isNaN(index) ||
-                    !cart[index]
-                ) {
-                    return;
-                }
-
-
-                if (action === "increase") {
-
-                    cart[index].quantity += 1;
-
-                }
-
-
-                if (action === "decrease") {
-
-                    cart[index].quantity -= 1;
-
-                    if (
-                        cart[index].quantity <= 0
-                    ) {
-
-                        cart.splice(
-                            index,
-                            1
-                        );
-
-                    }
-
-                }
-
-
-                if (action === "remove") {
-
-                    cart.splice(
-                        index,
-                        1
-                    );
-
-                }
-
-
-                renderCart();
-
-            }
-        );
-
-    }
-
-
-    /* =========================
-       فتح السلة
-    ========================= */
 
     function openCart() {
 
-        if (!cartOverlay) {
-            return;
-        }
-
         cartOverlay.classList.add("open");
 
-        document.body.classList.add(
-            "cart-open"
-        );
-
-        renderCart();
+        document.body.classList.add("cart-open");
 
     }
 
-
-    /* =========================
-       إغلاق السلة
-    ========================= */
 
     function closeCart() {
 
-        if (!cartOverlay) {
-            return;
-        }
+        cartOverlay.classList.remove("open");
 
-        cartOverlay.classList.remove(
-            "open"
-        );
-
-        document.body.classList.remove(
-            "cart-open"
-        );
+        document.body.classList.remove("cart-open");
 
     }
 
 
-    if (openCartButton) {
-
-        openCartButton.addEventListener(
+    document
+        .getElementById("openCartButton")
+        .addEventListener(
             "click",
             openCart
         );
 
-    }
 
-
-    if (closeCartButton) {
-
-        closeCartButton.addEventListener(
+    document
+        .getElementById("closeCartButton")
+        .addEventListener(
             "click",
             closeCart
         );
 
-    }
 
-
-    /* إغلاق عند الضغط خارج السلة */
-
-    if (cartOverlay) {
-
-        cartOverlay.addEventListener(
-            "click",
-            function (event) {
-
-                if (
-                    event.target ===
-                    cartOverlay
-                ) {
-
-                    closeCart();
-
-                }
-
-            }
-        );
-
-    }
-
-
-    /* =========================
-       زر Escape
-    ========================= */
-
-    document.addEventListener(
-        "keydown",
+    cartOverlay.addEventListener(
+        "click",
         function (event) {
 
-            if (
-                event.key === "Escape"
-            ) {
+            if (event.target === cartOverlay) {
 
                 closeCart();
 
@@ -548,26 +1001,22 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
-    /* =========================
-       تفريغ السلة
-    ========================= */
-
-    if (clearCartButton) {
-
-        clearCartButton.addEventListener(
+    document
+        .getElementById("clearCartButton")
+        .addEventListener(
             "click",
             function () {
 
-                if (cart.length === 0) {
-                    return;
-                }
+                if (cart.length === 0) return;
 
-                const confirmed =
-                    confirm(
-                        "هل تريد تفريغ سلة المشتريات؟"
-                    );
 
-                if (confirmed) {
+                const question =
+                    currentLanguage === "en"
+                        ? "Do you want to clear the cart?"
+                        : "هل تريد تفريغ السلة؟";
+
+
+                if (confirm(question)) {
 
                     cart = [];
 
@@ -578,23 +1027,19 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         );
 
-    }
 
-
-    /* =========================
-       إرسال السلة إلى واتساب
-    ========================= */
-
-    if (whatsappCartButton) {
-
-        whatsappCartButton.addEventListener(
+    document
+        .getElementById("whatsappCartButton")
+        .addEventListener(
             "click",
             function () {
 
                 if (cart.length === 0) {
 
                     alert(
-                        "السلة فارغة. أضف منتجًا أولًا."
+                        currentLanguage === "en"
+                            ? "Your cart is empty. Add a product first."
+                            : "السلة فارغة. أضف منتجًا أولاً."
                     );
 
                     return;
@@ -602,180 +1047,176 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
 
+                const t =
+                    translations[currentLanguage];
+
+
                 let message =
-                    "مرحباً شركة شيحه، أرغب بطلب المنتجات التالية:%0A%0A";
+                    t.orderMessage;
 
 
                 cart.forEach(
-                    function (item, index) {
+                    (item, index) => {
+
+                        const itemName =
+                            currentLanguage === "en"
+                                ? item.nameEn
+                                : item.name;
+
 
                         const subtotal =
-                            item.price *
-                            item.quantity;
+                            Number(item.price) *
+                            Number(item.quantity);
+
 
                         message +=
-                            (index + 1) +
-                            "- " +
-                            item.name +
-                            " × " +
-                            item.quantity +
-                            " = $" +
-                            subtotal.toFixed(2) +
-                            "%0A";
+                            `${index + 1}- ` +
+                            `${itemName} × ` +
+                            `${item.quantity}` +
+                            ` = $${subtotal.toFixed(2)}\n`;
 
                     }
                 );
 
 
                 message +=
-                    "%0Aالإجمالي: $" +
-                    calculateTotal().toFixed(2);
+                    t.totalMessage +
+                    getTotal().toFixed(2);
 
 
-                const whatsappUrl =
+                const url =
                     "https://wa.me/" +
                     WHATSAPP_NUMBER +
                     "?text=" +
-                    message;
+                    encodeURIComponent(message);
 
 
                 window.open(
-                    whatsappUrl,
+                    url,
                     "_blank"
                 );
 
             }
         );
 
-    }
+
+    searchInput.addEventListener(
+        "input",
+        filterProducts
+    );
 
 
-    /* =========================
-       البحث والتصنيفات
-    ========================= */
+    categoryButtons.forEach(button => {
 
-    let selectedCategory = "all";
+        button.addEventListener(
+            "click",
+            function () {
+
+                categoryButtons.forEach(
+                    item =>
+                        item.classList.remove("active")
+                );
+
+
+                button.classList.add("active");
+
+
+                selectedCategory =
+                    button.dataset.category;
+
+
+                filterProducts();
+
+            }
+        );
+
+    });
 
 
     function filterProducts() {
 
         const query =
-            searchInput
-                ? searchInput.value
-                    .trim()
-                    .toLowerCase()
-                : "";
-
-        let visibleCount = 0;
+            searchInput.value
+                .trim()
+                .toLowerCase();
 
 
-        products.forEach(
-            function (product) {
-
-                const name =
-                    (
-                        product.dataset.name ||
-                        ""
-                    ).toLowerCase();
-
-                const category =
-                    product.dataset.category ||
-                    "";
-
-
-                const matchesSearch =
-                    !query ||
-                    name.includes(query);
-
-
-                const matchesCategory =
-                    selectedCategory === "all" ||
-                    category === selectedCategory;
-
-
-                const shouldShow =
-                    matchesSearch &&
-                    matchesCategory;
-
-
-                product.style.display =
-                    shouldShow
-                        ? ""
-                        : "none";
-
-
-                if (shouldShow) {
-
-                    visibleCount++;
-
-                }
-
-            }
-        );
-
-
-        if (noResults) {
-
-            noResults.hidden =
-                visibleCount !== 0;
-
-        }
-
-    }
-
-
-    if (searchInput) {
-
-        searchInput.addEventListener(
-            "input",
-            filterProducts
-        );
-
-    }
-
-
-    categoryButtons.forEach(
-        function (button) {
-
-            button.addEventListener(
-                "click",
-                function () {
-
-                    categoryButtons.forEach(
-                        function (item) {
-
-                            item.classList.remove(
-                                "active"
-                            );
-
-                        }
-                    );
-
-
-                    button.classList.add(
-                        "active"
-                    );
-
-
-                    selectedCategory =
-                        button.dataset.category;
-
-
-                    filterProducts();
-
-                }
+        const cards =
+            document.querySelectorAll(
+                ".product-card"
             );
+
+
+        let visible = 0;
+
+
+        cards.forEach(card => {
+
+            const name =
+                card.dataset.name;
+
+            const category =
+                card.dataset.category;
+
+
+            const searchMatch =
+                !query ||
+                name.includes(query);
+
+
+            const categoryMatch =
+                selectedCategory === "all" ||
+                category === selectedCategory;
+
+
+            const show =
+                searchMatch &&
+                categoryMatch;
+
+
+            card.style.display =
+                show ? "" : "none";
+
+
+            if (show) {
+                visible++;
+            }
+
+        });
+
+
+        noResults.hidden =
+            visible !== 0;
+
+    }
+
+
+    languageButton.addEventListener(
+        "click",
+        function () {
+
+            currentLanguage =
+                currentLanguage === "ar"
+                    ? "en"
+                    : "ar";
+
+
+            localStorage.setItem(
+                LANGUAGE_KEY,
+                currentLanguage
+            );
+
+
+            applyLanguage();
 
         }
     );
 
 
-    /* =========================
-       تشغيل أولي
-    ========================= */
+    year.textContent =
+        new Date().getFullYear();
 
-    renderCart();
 
-    filterProducts();
+    applyLanguage();
 
 });
