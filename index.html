@@ -1,101 +1,720 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>شركة شيحه | SHEHA CO</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="شركة شيحه SHEHA CO - الأدوات الصحية ومستلزمات السباكة">
+
+    <title>شركة شيحه | SHEHA CO</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-  <div class="logo">
-    <img src="images/logo.jpg" alt="شركة شيحه - SHEHA CO">
-</div>
-  <nav>
-    <a href="#home">الرئيسية</a>
-    <a href="#products">المنتجات</a>
-    <a href="#about">من نحن</a>
-    <a href="#contact">تواصل معنا</a>
-  </nav>
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+    <a href="#home" class="brand">
+
+        <img
+            src="images/logo.jpg"
+            alt="شعار شركة شيحه SHEHA CO"
+            class="logo-image"
+            onerror="this.style.display='none'; document.querySelector('.brand-fallback').style.display='block';"
+        >
+
+        <span class="brand-fallback">
+            شركة شيحه
+            <small>SHEHA CO</small>
+        </span>
+
+    </a>
+
+    <nav class="main-nav">
+
+        <a href="#home">الرئيسية</a>
+
+        <a href="#products">المنتجات</a>
+
+        <a href="#about">من نحن</a>
+
+        <a href="#contact">تواصل معنا</a>
+
+        <button
+            class="cart-button"
+            id="openCartButton"
+            type="button">
+
+            🛒
+            <span>السلة</span>
+
+            <b id="cartCount">0</b>
+
+        </button>
+
+    </nav>
+
 </header>
 
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero" id="home">
-  <h2>شركة شيحه</h2>
-  <h3>SHEHA CO</h3>
-  <p>للأدوات الصحية ومستلزمات السباكة</p>
-  <p>جودة وأسعار مناسبة</p>
-  <a href="#products" class="main-button">تصفح المنتجات</a>
-</section>
 
-<section class="products" id="products">
-  <h2>منتجاتنا</h2>
-  <p class="section-description">اكتشف منتجات شركة شيحه</p>
+    <div class="hero-content">
 
-  <div class="product-container">
+        <span class="hero-label">
+            SHEHA CO
+        </span>
 
-    <div class="product">
-      <div class="product-image">
-        <img src="images/product1.jpg" alt="سكر عصفورة">
-      </div>
-      <h3>سكر عصفورة</h3>
-      <p>منتج سكر عصفورة</p>
-      <strong>$1.00</strong>
-      <a class="order-button"
-         href="https://wa.me/963933955690?text=مرحباً%20شركة%20شيحه،%20أرغب%20بطلب%20سكر%20عصفورة"
-         target="_blank">اطلب عبر واتساب</a>
+        <h1>
+            شركة شيحه
+        </h1>
+
+        <h2>
+            للأدوات الصحية ومستلزمات السباكة
+        </h2>
+
+        <p>
+            جودة وأسعار مناسبة
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="#products"
+                class="button button-light">
+
+                تصفح المنتجات
+
+            </a>
+
+            <a
+                href="https://wa.me/963933955690?text=مرحباً%20شركة%20شيحه،%20أرغب%20بالاستفسار%20عن%20المنتجات"
+                target="_blank"
+                class="button button-whatsapp">
+
+                واتساب
+
+            </a>
+
+        </div>
+
     </div>
 
-    <div class="product">
-      <div class="product-image"><img src="images/product2.jpg" alt="مضخة 1/2 حصان"></div>
-      <h3>مضخة 1/2 حصان</h3>
-      <p>مضخة مياه بقوة 1/2 حصان</p>
-      <strong>$28.00</strong>
-      <a class="order-button"
-         href="https://wa.me/963933955690?text=مرحباً%20شركة%20شيحه،%20أرغب%20بطلب%20مضخة%201%2F2%20حصان"
-         target="_blank">اطلب عبر واتساب</a>
-    </div>
-
-    <div class="product">
-      <div class="product-image"><img src="images/product3.jpg" alt="حنفية بلاستيك كريستال"></div>
-      <h3>حنفية بلاستيك كريستال</h3>
-      <p>حنفية بلاستيك بتصميم كريستال</p>
-      <strong>$0.75</strong>
-      <a class="order-button"
-         href="https://wa.me/963933955690?text=مرحباً%20شركة%20شيحه،%20أرغب%20بطلب%20حنفية%20بلاستيك%20كريستال"
-         target="_blank">اطلب عبر واتساب</a>
-    </div>
-
-    <div class="product">
-      <div class="product-image"><img src="images/product4.png" alt="خلاط حمام كوستا"></div>
-      <h3>خلاط حمام كوستا</h3>
-      <p>خلاط حمام كوستا</p>
-      <strong>$20</strong>
-      <a class="order-button"
-         href="https://wa.me/963933955690?text=مرحباً%20شركة%20شيحه،%20أرغب%20بطلب%20حنفية%20بلاستيك%20كريستال"
-         target="_blank">اطلب عبر واتساب</a>
-    </div>
-
-  </div>
 </section>
 
-<section class="about" id="about">
-  <h2>من نحن</h2>
-  <p>شركة شيحه SHEHA CO متخصصة في الأدوات الصحية ومستلزمات السباكة، ونقدم منتجات بجودة مناسبة وأسعار منافسة.</p>
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section class="features">
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+            ✓
+        </div>
+
+        <div>
+            <strong>
+                منتجات مختارة
+            </strong>
+
+            <span>
+                خيارات مناسبة للاستخدام اليومي
+            </span>
+        </div>
+
+    </div>
+
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+            $
+        </div>
+
+        <div>
+            <strong>
+                أسعار واضحة
+            </strong>
+
+            <span>
+                الأسعار بالدولار الأمريكي
+            </span>
+        </div>
+
+    </div>
+
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+            ☎
+        </div>
+
+        <div>
+            <strong>
+                طلب سريع
+            </strong>
+
+            <span>
+                تواصل مباشر عبر واتساب
+            </span>
+        </div>
+
+    </div>
+
 </section>
 
-<section class="contact" id="contact">
-  <h2>تواصل معنا</h2>
-  <p>للاستفسار عن المنتجات والأسعار والطلبات</p>
-  <a class="whatsapp-button" href="https://wa.me/963933955690" target="_blank">تواصل معنا عبر واتساب</a>
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section class="products-section" id="products">
+
+    <div class="section-title">
+
+        <span>
+            متجر شركة شيحه
+        </span>
+
+        <h2>
+            منتجاتنا
+        </h2>
+
+        <p>
+            ابحث عن المنتج أو اختر التصنيف المناسب
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="shop-tools">
+
+        <div class="search-box">
+
+            <span>
+                🔎
+            </span>
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="ابحث عن منتج..."
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <!-- CATEGORIES -->
+
+        <div class="categories">
+
+            <button
+                class="category active"
+                data-category="all"
+                type="button">
+
+                الكل
+
+            </button>
+
+            <button
+                class="category"
+                data-category="سكر"
+                type="button">
+
+                سكر
+
+            </button>
+
+            <button
+                class="category"
+                data-category="مضخات"
+                type="button">
+
+                مضخات
+
+            </button>
+
+            <button
+                class="category"
+                data-category="حنفيات"
+                type="button">
+
+                حنفيات
+
+            </button>
+
+            <button
+                class="category"
+                data-category="خلاطات"
+                type="button">
+
+                خلاطات
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- PRODUCTS GRID -->
+
+    <div
+        class="products-grid"
+        id="productsGrid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <article
+            class="product-card"
+            data-name="سكر عصفورة"
+            data-category="سكر">
+
+            <div class="product-image">
+
+                <img
+                    src="images/product1.jpg"
+                    alt="سكر عصفورة"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    سكر
+                </span>
+
+                <h3>
+                    سكر عصفورة
+                </h3>
+
+                <p>
+                    منتج سكر عصفورة
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        $1.00
+                    </strong>
+
+                    <button
+                        class="add-to-cart"
+                        type="button"
+                        data-name="سكر عصفورة"
+                        data-price="1">
+
+                        أضف للسلة
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 2 -->
+
+        <article
+            class="product-card"
+            data-name="مضخة 1/2 حصان"
+            data-category="مضخات">
+
+            <div class="product-image">
+
+                <img
+                    src="images/product2.jpg"
+                    alt="مضخة 1/2 حصان"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    مضخات
+                </span>
+
+                <h3>
+                    مضخة 1/2 حصان
+                </h3>
+
+                <p>
+                    مضخة مياه بقوة 1/2 حصان
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        $28.00
+                    </strong>
+
+                    <button
+                        class="add-to-cart"
+                        type="button"
+                        data-name="مضخة 1/2 حصان"
+                        data-price="28">
+
+                        أضف للسلة
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 3 -->
+
+        <article
+            class="product-card"
+            data-name="حنفية بلاستيك كريستال"
+            data-category="حنفيات">
+
+            <div class="product-image">
+
+                <img
+                    src="images/product3.jpg"
+                    alt="حنفية بلاستيك كريستال"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    حنفيات
+                </span>
+
+                <h3>
+                    حنفية بلاستيك كريستال
+                </h3>
+
+                <p>
+                    حنفية بلاستيك بتصميم كريستال
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        $0.75
+                    </strong>
+
+                    <button
+                        class="add-to-cart"
+                        type="button"
+                        data-name="حنفية بلاستيك كريستال"
+                        data-price="0.75">
+
+                        أضف للسلة
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 4 -->
+
+        <article
+            class="product-card"
+            data-name="خلاط حمام كوستا"
+            data-category="خلاطات">
+
+            <div class="product-image">
+
+                <img
+                    src="images/product4.png"
+                    alt="خلاط حمام كوستا"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    خلاطات
+                </span>
+
+                <h3>
+                    خلاط حمام كوستا
+                </h3>
+
+                <p>
+                    خلاط حمام كوستا
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        $20.00
+                    </strong>
+
+                    <button
+                        class="add-to-cart"
+                        type="button"
+                        data-name="خلاط حمام كوستا"
+                        data-price="20">
+
+                        أضف للسلة
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+    <p
+        id="noResults"
+        class="no-results"
+        hidden>
+
+        لم يتم العثور على منتج مطابق.
+
+    </p>
+
 </section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+    class="about-section"
+    id="about">
+
+    <div>
+
+        <span class="section-kicker">
+            SHEHA CO
+        </span>
+
+        <h2>
+            من نحن
+        </h2>
+
+        <p>
+            شركة شيحه SHEHA CO متخصصة في الأدوات الصحية
+            ومستلزمات السباكة، ونقدم منتجات بجودة مناسبة
+            وأسعار منافسة.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+    class="contact-section"
+    id="contact">
+
+    <div class="contact-card">
+
+        <span class="section-kicker">
+            تواصل معنا
+        </span>
+
+        <h2>
+            هل لديك استفسار؟
+        </h2>
+
+        <p>
+            أرسل لنا اسم المنتج الذي تريده وسنتواصل معك
+            عبر واتساب.
+        </p>
+
+        <a
+            href="https://wa.me/963933955690?text=مرحباً%20شركة%20شيحه،%20أرغب%20بالاستفسار%20عن%20المنتجات"
+            target="_blank"
+            class="big-whatsapp">
+
+            تواصل معنا عبر واتساب
+
+        </a>
+
+        <p class="phone">
+            00963 933 955 690
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-  <h3>شركة شيحه | SHEHA CO</h3>
-  <p>سوريا</p>
-  <p>واتساب: 00963933955690</p>
-  <p>© 2026 شركة شيحه - جميع الحقوق محفوظة</p>
+
+    <h3>
+        شركة شيحه | SHEHA CO
+    </h3>
+
+    <p>
+        سوريا
+    </p>
+
+    <p>
+        واتساب:
+        00963933955690
+    </p>
+
+    <p>
+        © <span id="year"></span>
+        شركة شيحه - جميع الحقوق محفوظة
+    </p>
+
 </footer>
 
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+    class="floating-whatsapp"
+    href="https://wa.me/963933955690?text=مرحباً%20شركة%20شيحه،%20أرغب%20بالاستفسار%20عن%20المنتجات"
+    target="_blank"
+    aria-label="التواصل مع شركة شيحه عبر واتساب">
+
+    واتساب
+
+</a>
+
+
+<!-- =========================
+     CART
+========================= -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay">
+
+    <div
+        class="cart-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cartTitle">
+
+        <div class="cart-header">
+
+            <h2 id="cartTitle">
+                سلة المشتريات
+            </h2>
+
+            <button
+                id="closeCartButton"
+                class="close-cart"
+                type="button">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="cartItems"
+            class="cart-items">
+
+        </div>
+
+
+        <div
+            id="emptyCart"
+            class="empty-cart">
+
+            السلة فارغة حاليًا.
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>
+                    الإجمالي
+                </span>
+
+                <strong>
+                    $<span id="cartTotal">0.00</span>
+                </strong>
+
+            </div>
+
+            <button
+                id="whatsappCartButton"
+                class="checkout-button"
+                type="button">
+
+                إرسال الطلب عبر واتساب
+
+            </button>
+
+            <button
+                id="clearCartButton"
+                class="clear-button"
+                type="button">
+
+                تفريغ السلة
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
