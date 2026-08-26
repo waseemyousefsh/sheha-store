@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "شركة شيحه",
 
             aboutText:
-                "شركة شيحه SHEHA CO متخصصة في استيراد وتجارة عموم الأدوات الصحية والطاقة الشمسية. نعمل على توفير منتجات متنوعة وأسعار واضحة مع إمكانية الطلب والتواصل مباشرة عبر واتساب.",
+                "شركة شيحة — خبرةٌ تمتد منذ عام 2008\n\nمنذ عام 2008، تواصل شركة شيحة مسيرتها في مجال استيراد وتجارة الأدوات الصحية وحلول الطاقة الشمسية، واضعةً الجودة والموثوقية ورضا العملاء في مقدمة أولوياتها.\n\nنسعى إلى تلبية احتياجات السوق من خلال توفير مجموعة واسعة ومتنوعة من الأدوات الصحية والمنتجات ذات الجودة العالية، إلى جانب حلول ومنتجات الطاقة الشمسية، مع الحرص على اختيار منتجات موثوقة تلبي تطلعات عملائنا وتواكب احتياجات السوق المتغيرة.\n\nوبفضل خبرتنا الممتدة لسنوات، وعلاقاتنا المتينة مع الموردين، وحرصنا المستمر على تطوير منتجاتنا وخدماتنا، نعمل على تقديم أفضل قيمة مقابل السعر، من خلال الجمع بين الجودة العالية والأسعار المنافسة، بما يضمن لعملائنا خيارات عملية وموثوقة تلائم مختلف الاحتياجات.\n\nفي شركة شيحة، لا نكتفي بتوفير المنتجات، بل نحرص على بناء علاقات طويلة الأمد مع عملائنا تقوم على الثقة، الجودة، الالتزام، وحسن الخدمة.\n\nشركة شيحة — خبرة تُبنى عليها الثقة، وجودة تلبي احتياجاتك.",
 
             whyUs:
                 "لماذا تختارنا؟",
@@ -127,6 +127,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             syria:
                 "سوريا",
+
+            facebook:
+                "صفحتنا على Facebook",
 
             rights:
                 "جميع الحقوق محفوظة",
@@ -254,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Sheha Company",
 
             aboutText:
-                "SHEHA CO specializes in importing and general trading of sanitary ware and solar energy products. We offer a variety of products, clear prices and direct ordering through WhatsApp.",
+                "Shiha Company — Expertise You Can Trust Since 2008\n\nSince 2008, Shiha Company has been building its experience and reputation in the import and trade of sanitary ware and solar energy solutions, with quality, reliability, and customer satisfaction at the heart of everything we do.\n\nWe are committed to meeting the needs of the market by providing a wide and diverse range of high-quality sanitary products, in addition to solar energy products and solutions. We carefully select reliable products that meet our customers’ expectations and keep pace with the evolving needs of the market.\n\nWith years of experience, strong relationships with trusted suppliers, and a continuous commitment to developing our products and services, we strive to offer the best value for money by combining high quality with competitive prices. This enables our customers to find practical, reliable solutions that meet a wide range of requirements.\n\nAt Shiha Company, we do more than simply provide products. We are committed to building long-term relationships with our customers based on trust, quality, commitment, and excellent service.\n\nShiha Company — Experience You Can Trust, Quality That Meets Your Needs.",
 
             whyUs:
                 "Why Choose Us?",
@@ -297,6 +300,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             syria:
                 "Syria",
+
+            facebook:
+                "Our Facebook Page",
 
             rights:
                 "All rights reserved",
@@ -343,62 +349,533 @@ document.addEventListener("DOMContentLoaded", function () {
 
         {
             id: 1,
-            name: "سكر عصفورة",
-            nameEn: "Asfoura Sugar",
-            price: 1,
-            category: "سكر",
+            name: "طاقة شمسية لتسخين المياه",
+            nameEn: "Solar water heater",
+            price: 275,
+            category: "'طاقة",
             categoryEn: "Sugar",
-            description: "منتج سكر عصفورة",
-            descriptionEn: "Asfoura sugar product",
+            description: "طاقة شمسية لتسخين المياه",
+            descriptionEn: "Solar water heater product",
             image: "images/product1.jpg"
         },
 
         {
             id: 2,
-            name: "مضخة 1/2 حصان",
-            nameEn: "1/2 HP Water Pump",
-            price: 28,
-            category: "مضخات",
-            categoryEn: "Pumps",
-            description: "مضخة مياه بقوة 1/2 حصان",
-            descriptionEn: "1/2 horsepower water pump",
+            name: "كونترول طاقة شمسية",
+            nameEn: "Tk control",
+            price: 25,
+            category: "كونترول",
+            categoryEn: "control",
+            description: "كونترول طاقة شمسية",
+            descriptionEn: "Tk control",
             image: "images/product2.jpg"
         },
 
         {
             id: 3,
-            name: "حنفية بلاستيك كريستال",
+            name: "كاسر ضغط",
             nameEn: "Crystal Plastic Faucet",
             price: 0.75,
-            category: "حنفيات",
+            category: "طاقة شمسية",
             categoryEn: "Faucets",
-            description: "حنفية بلاستيك بتصميم كريستال",
-            descriptionEn: "Crystal design plastic faucet",
+            description: "كاسر ضغط",
+            descriptionEn: "Pressure reducer ",
             image: "images/product3.jpg"
         },
 
         {
             id: 4,
-            name: "خلاط حمام كوستا",
-            nameEn: "Costa Bathroom Mixer",
-            price: 20,
-            category: "خلاطات",
+            name: "أنبوب طاقة شمسية",
+            nameEn: "Water heater pipe",
+            price: 5,
+            category: "طاقة شمسية",
             categoryEn: "Mixers",
-            description: "خلاط حمام كوستا",
+            description: "أنبوب طاقة شمسية",
             descriptionEn: "Costa bathroom mixer",
-            image: "images/product4.png"
-        }
+            image: "images/product4.jpg"
+        },
+
+        {
+            id: 5,
+            name: "مضخة فلتر مياه",
+            nameEn: "Water filter pump",
+            price: 22,
+            category: "فلاتر مياه",
+            categoryEn: "Pumps",
+            description: "مضخة فلتر مياه",
+            descriptionEn: "Water filter pump",
+            image: "images/product5.jpg"
+        },
+
+{
+            id: 6,
+            name: "مضخة تسريع مياه كروم",
+            nameEn: "Pressure booster pump",
+            price: 20,
+            category: "مضخات مياه",
+            categoryEn: "Pumps",
+            description: "مضخة تسريع مياه كروم",
+            descriptionEn: "Pressure booster pump",
+            image: "images/product6.jpg"
+        },
+
+{
+            id: 7,
+            name: "مضخة مياه",
+            nameEn: "Water pump",
+            price: 30,
+            category: "فلاتر مياه",
+            categoryEn: "Pumps",
+            description: "مضخة مياه",
+            descriptionEn: "Water pump",
+            image: "images/product7.jpg"
+        },
+
+{
+            id: 8,
+            name: "مضخة تسريع مياه فونط",
+            nameEn: "Pressure booster pump",
+            price: 25,
+            category: "مضخات مياه",
+            categoryEn: "Pumps",
+            description: "مضخة تسريع مياه فونط",
+            descriptionEn: "Pressure booster pump",
+            image: "images/product8.jpg"
+        },
+
+{
+            id: 9,
+            name: "هيدروفورم مضخة مياه",
+            nameEn: "Pressure pump control",
+            price: 22,
+            category: "مضخات مياه",
+            categoryEn: "Pumps",
+            description: "هيدروفورم مضخة مياه ",
+            descriptionEn: "Pressure pump control",
+            image: "images/product9.jpg"
+        },
+
+{
+            id: 10,
+            name: "فلتر مياه",
+            nameEn: "Water 5 stages filter",
+            price: 100,
+            category: "فلاتر مياه",
+            categoryEn: "Pumps",
+            description: "فلتر مياه",
+            descriptionEn: "Water 5 stages filter",
+            image: "images/product10.jpg"
+        },
+
+{
+            id: 11,
+            name: "خرطوشة فلتر مياه سللوز",
+            nameEn: "Water polypropylane filter",
+            price: 2,
+            category: "فلاتر مياه",
+            categoryEn: "Pumps",
+            description: "خرطوشة فلتر مياه سللوز",
+            descriptionEn: "Water polypropylane filter",
+            image: "images/product11.jpg"
+        },
+
+{
+            id: 12,
+            name: "خرطوشة فلتر مياه فحم صلب ",
+            nameEn: "Water 10 m nominal filter",
+            price: 2,
+            category: "فلاتر مياه",
+            categoryEn: "Pumps",
+            description: "خرطوشة فلتر مياه فحم صلب ",
+            descriptionEn: "Water 10 m nominal filter",
+            image: "images/product12.jpg"
+        },
+
+{
+            id: 13,
+            name: "خرطوشة فلتر مياه كربون",
+            nameEn: "Water carbon filter",
+            price: 2,
+            category: "فلاتر مياه",
+            categoryEn: "Pumps",
+            description: "خرطوشة فلتر مياه كربون",
+            descriptionEn: "Water carbon filter",
+            image: "images/product13.jpg"
+        },
+
+{
+            id: 14,
+            name: "خلاط حمام كوستا",
+            nameEn: "Costa bath mixer ",
+            price: 20,
+            category: "خلاطات و حنفيات مياه",
+            categoryEn: "Water Mixer",
+            description: "خلاط حمام كوستا",
+            descriptionEn: "Costa bath mixer ",
+            image: "images/product14.jpg"
+        },
+
+{
+            id: 16,
+            name: "خلاط مغسلة كوستا",
+            nameEn: "Costa sink mixer ",
+            price: 15,
+            category: "خلاطات و حنفيات مياه",
+            categoryEn: "Water mixer",
+            description: "خلاط مغسلة كوستا",
+            descriptionEn: "Costa sink mixer ",
+            image: "images/product16.jpg"
+        },
+
+{
+            id: 15,
+            name: "خلاط مجلى كوستا",
+            nameEn: "Costa wall mounted mixer ",
+            price: 15,
+            category: "خلاطات و حنفيات مياه",
+            categoryEn: "Water mixer",
+            description: "خلاط مجلى كوستا",
+            descriptionEn: "Costa wall mounted mixer ",
+            image: "images/product15.jpg"
+        },
+
+{
+            id: 17,
+            name: "حنفية كروم طويلة ",
+            nameEn: "Long water faucet ",
+            price: 5,
+            category: "خلاطات و حنفيات مياه",
+            categoryEn: "Water mixer",
+            description: "حنفية كروم طويلة",
+            descriptionEn: "Long Water faucet ",
+            image: "images/product17.jpg"
+        },
+
+{
+            id: 18,
+            name: "حنفية مياه شك",
+            nameEn: "Water tap doubt  ",
+            price: 5,
+            category: "خلاطات و حنفيات مياه",
+            categoryEn: "Water mixer",
+            description: "حنفية مياه شك",
+            descriptionEn: "Water tap doubt ",
+            image: "images/product18.jpg"
+        },
+
+{
+            id: 19,
+            name: "سكر زاوية نحاس",
+            nameEn: "Angle valve  ",
+            price: 2,
+            category: "خلاطات و حنفيات مياه",
+            categoryEn: "Water mixer",
+            description: "سكر زاوية نحاس",
+            descriptionEn: "Angle valve ",
+            image: "images/product19.jpg"
+        },
+
+{
+            id: 20,
+            name: "رقبة خلاط طويلة",
+            nameEn: "long mixer spout  ",
+            price: 1,
+            category: "خلاطات و حنفيات مياه",
+            categoryEn: "Water mixer",
+            description: "رقبة خلاط طويلة",
+            descriptionEn: "Long mixer spout ",
+            image: "images/product20.jpg"
+        },
+
+{
+            id: 21,
+            name: "رقبة خلاط عكاز ",
+            nameEn: "Mixer tap spout  ",
+            price: 1,
+            category: "خلاطات و حنفيات مياه",
+            categoryEn: "Water mixer",
+            description: "رقبة خلاط عكاز",
+            descriptionEn: "Mixer tap spout ",
+            image: "images/product21.jpg"
+        },
+
+{
+            id: 22,
+            name: "رقبة خلاط عريضة قصيرة ",
+            nameEn: "Short wide tap spout  ",
+            price: 2,
+            category: "خلاطات و حنفيات مياه",
+            categoryEn: "Water mixer",
+            description: "رقبة خلاط عريضة قصيرة",
+            descriptionEn: "Short wide tap spout ",
+            image: "images/product22.jpg"
+        },
+
+{
+            id: 23,
+            name: "رقبة خلاط عريضة طويلة ",
+            nameEn: "Long wide tap spout  ",
+            price: 2,
+            category: "خلاطات و حنفيات مياه",
+            categoryEn: "Water mixer",
+            description: "رقبة خلاط عريضة طويلة",
+            descriptionEn: "Long wide tap spout ",
+            image: "images/product23.jpg"
+        },
+
+{
+            id: 24,
+            name: "مجموعة دوش حمام مزدوجة ",
+            nameEn: "Dual shower set  ",
+            price: 15,
+            category: "خلاطات و حنفيات مياه",
+            categoryEn: "Water mixer",
+            description: "مجموعة دوش حمام مزدوجة",
+            descriptionEn: "Dual shower set ",
+            image: "images/product24.jpg"
+        },
+
+
+{
+            id: 25,
+            name: "دوش حمام مفرد ",
+            nameEn: "Shower set  ",
+            price: 2.500,
+            category: "خلاطات و حنفيات مياه",
+            categoryEn: "Water mixer",
+            description: "دوش حمام مفرد",
+            descriptionEn: "Shwer set ",
+            image: "images/product25.jpg"
+        },
+
+{
+            id: 26,
+            name: "قبضة دوش  مفردة ",
+            nameEn: "Shower handle  ",
+            price: 1.25,
+            category: "خلاطات و حنفيات مياه",
+            categoryEn: "Water mixer",
+            description: "قبضة دوش  مفردة",
+            descriptionEn: "Shwer handle ",
+            image: "images/product26.jpg"
+        },
+
+{
+            id: 27,
+            name: "مجموعة شطاف",
+             nameEn: "Bidet sprayer set  ",
+            price: 2.5,
+            category: "خلاطات و حنفيات مياه",
+            categoryEn: "Water mixer",
+            description: "مجموعة شطاف",
+            descriptionEn: "Bidet sprayer set ",
+            image: "images/product27.jpg"
+        },
+
+{
+            id: 28,
+            name: "قبضة شطاف",
+            nameEn: "Bidet sprayer  ",
+            price: 1.25,
+            category: "خلاطات و حنفيات مياه",
+            categoryEn: "Water mixer",
+            description: "قبضة شطاف",
+            descriptionEn: "Bidet sprayer ",
+            image: "images/product28.jpg"
+        },
+
+{
+            id: 29,
+            name: "خرطوم تواليت كروم",
+            nameEn: "Toilet hose  ",
+            price: 1.25,
+            category: "خرطوم ",
+            categoryEn: "hose",
+            description: "خرطوم تواليت كروم",
+            descriptionEn: "Toilet hose ",
+            image: "images/product29.jpg"
+        },
+
+{
+            id: 30,
+            name: "خرطوم تواليت حرير",
+            nameEn: "Plastic Toilet hose  ",
+            price: 1,
+            category: "خرطوم ",
+            categoryEn: "hose",
+            description: "خرطوم تواليت حرير",
+            descriptionEn: "Plastic Toilet hose ",
+            image: "images/product30.jpg"
+        },
+
+{
+            id: 31,
+            name: "خرطوم دوش كروم",
+            nameEn: "Shower hose  ",
+            price: 2,
+            category: "خرطوم ",
+            categoryEn: "hose",
+            description: "خرطوم دوش كروم",
+            descriptionEn: "Shower hose ",
+            image: "images/product31.jpg"
+        },
+
+{
+            id: 32,
+            name: "كبسة عدة كرسي حمام ",
+            nameEn: "Toilet flush button  ",
+            price: 1,
+            category: "مستلزمات كرسي حمام ",
+            categoryEn: "Toilet chair accessories",
+            description: "كبسة عدة كرسي حمام",
+            descriptionEn: "Toilet flush button ",
+            image: "images/product32.jpg"
+        },
+
+{
+            id: 33,
+            name: " عدة كرسي حمام ",
+            nameEn: "Toilet flush   ",
+            price: 5,
+            category: "مستلزمات كرسي حمام ",
+            categoryEn: "Toilet chair accessories",
+            description: " عدة كرسي حمام",
+            descriptionEn: "Toilet flush  ",
+            image: "images/product33.jpg"
+        },
+
+{
+            id: 34,
+            name: "  سدة مغسلة  ",
+            nameEn: "sink cover hole   ",
+            price: 1,
+            category: "مستلزمات مغسلة ",
+            categoryEn: "sink accessories",
+            description: " سدة مغسلة ",
+            descriptionEn: "sink cover hole  ",
+            image: "images/product34.jpg"
+        },
+
+{
+            id: 35,
+            name: " وصلة ذكر طرفين 1/2 ",
+            nameEn: "Male adapter 1/2   ",
+            price: 1,
+            category: " كروميات ",
+            categoryEn: "Chrome accessories",
+            description: "وصلة ذكر طرفين 1/2",
+            descriptionEn: "Male adapter 1/2  ",
+            image: "images/product35.jpg"
+        },
+
+{
+            id: 36,
+            name: " وصلة ذكر طرفين 3/8 ",
+            nameEn: "Male adapter 3/8   ",
+            price: 1,
+            category: " كروميات ",
+            categoryEn: "Chrome accessories",
+            description: "وصلة ذكر طرفين 3/8",
+            descriptionEn: "Male adapter 3/8  ",
+            image: "images/product36.jpg"
+        },
+
+{
+            id: 37,
+            name: " اكرة بسن 3/4*1/2",
+            nameEn: "Male1/2 female 3/4 adapter    ",
+            price: 1,
+            category: " كروميات ",
+            categoryEn: "Chrome accessories",
+            description: "اكرة بسن 3/4*1/2",
+            descriptionEn: "Male 1/2 female 3/4 adapter  ",
+            image: "images/product37.jpg"
+        },
+
+{
+            id: 38,
+            name: " كوع كروم 1/2 ",
+            nameEn: "Chrome elbow 1/2   ",
+            price: 1,
+            category: " كروميات ",
+            categoryEn: "Chrome accessories",
+            description: "كوع كروم 1/2",
+            descriptionEn: "Chrome elbow 1/2  ",
+            image: "images/product38.jpg"
+        },
+
+{
+            id: 39,
+            name: " كوع ذكر كروم 1/2 ",
+            nameEn: "Chrome male elbow 1/2   ",
+            price: 1,
+            category: " كروميات ",
+            categoryEn: "Chrome accessories",
+            description: "كوع ذكر كروم 1/2",
+            descriptionEn: "Chrome male elbow 1/2  ",
+            image: "images/product39.jpg"
+        },
+
+{
+            id: 40,
+            name: " تيه كروم 1/2 ",
+            nameEn: "Chrome T 1/2   ",
+            price: 1.25,
+            category: " كروميات ",
+            categoryEn: "Chrome accessories",
+            description: "تيه كروم 1/2",
+            descriptionEn: "Chrome T 1/2  ",
+            image: "images/product40.jpg"
+        },
+
+{
+            id: 41,
+            name: " براغي تثبيت سخان مياه",
+            nameEn: "Water heater screws   ",
+            price: 1,
+            category: " براغي ",
+            categoryEn: "Mounting screws",
+            description: "براغي تثبيت سخان مياه",
+            descriptionEn: "Water heater screws  ",
+            image: "images/product41.jpg"
+        },
+
+{
+            id: 42,
+            name: " براغي تثبيت كرسي حمام ",
+            nameEn: "Toilet seat screws   ",
+            price: 1,
+            category: " براغي ",
+            categoryEn: "Mounting screws",
+            description: "براغي تثبيت كرسي حمام",
+            descriptionEn: "toilet seat screws  ",
+            image: "images/product42.jpg"
+        },
+
+{
+            id: 43,
+            name: " براغي تثبيت مغسلة ",
+            nameEn: "Sink screws   ",
+            price: 1,
+            category: " براغي ",
+            categoryEn: "Mounting screws",
+            description: "براغي تثبيت مغسلة",
+            descriptionEn: "Sink screws  ",
+            image: "images/product43.jpg"
+        },
+
 
     ];
 
 
-    for (let i = 5; i <= 50; i++) {
+    for (let i = 50; i <= 50; i++) {
 
         products.push({
 
             id: i,
 
-            name: `منتج ${i}`,
+            name: "كرسي مرحاض",
+
 
             nameEn: `Product ${i}`,
 
@@ -451,6 +928,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const languageButton =
         document.getElementById("languageButton");
+
+    const aboutSection =
+        document.getElementById("about");
+
+    const aboutLink =
+        document.querySelector('a[href="#about"]');
 
     const categoryButtons =
         document.querySelectorAll(".category");
@@ -1214,7 +1697,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     year.textContent =
-        new Date().getFullYear();
+        "2019";
+
+    if (aboutLink && aboutSection) {
+        aboutLink.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            const isHidden = aboutSection.classList.contains("about-hidden");
+
+            aboutSection.classList.remove("about-hidden");
+            aboutSection.setAttribute("aria-hidden", "false");
+
+            if (isHidden) {
+                setTimeout(() => {
+                    aboutSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }, 60);
+            }
+        });
+    }
 
 
     applyLanguage();
