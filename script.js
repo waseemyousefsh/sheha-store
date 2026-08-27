@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "شركة شيحه",
 
             aboutText:
-                "شركة شيحه SHEHA CO متخصصة في استيراد وتجارة عموم الأدوات الصحية والطاقة الشمسية. نعمل على توفير منتجات متنوعة وأسعار واضحة مع إمكانية الطلب والتواصل مباشرة عبر واتساب.",
+                "شركة شيحة — خبرةٌ تمتد منذ عام 2008\n\nمنذ عام 2008، تواصل شركة شيحة مسيرتها في مجال استيراد وتجارة الأدوات الصحية وحلول الطاقة الشمسية، واضعةً الجودة والموثوقية ورضا العملاء في مقدمة أولوياتها.\n\nنسعى إلى تلبية احتياجات السوق من خلال توفير مجموعة واسعة ومتنوعة من الأدوات الصحية والمنتجات ذات الجودة العالية، إلى جانب حلول ومنتجات الطاقة الشمسية، مع الحرص على اختيار منتجات موثوقة تلبي تطلعات عملائنا وتواكب احتياجات السوق المتغيرة.\n\nوبفضل خبرتنا الممتدة لسنوات، وعلاقاتنا المتينة مع الموردين، وحرصنا المستمر على تطوير منتجاتنا وخدماتنا، نعمل على تقديم أفضل قيمة مقابل السعر، من خلال الجمع بين الجودة العالية والأسعار المنافسة، بما يضمن لعملائنا خيارات عملية وموثوقة تلائم مختلف الاحتياجات.\n\nفي شركة شيحة، لا نكتفي بتوفير المنتجات، بل نحرص على بناء علاقات طويلة الأمد مع عملائنا تقوم على الثقة، الجودة، الالتزام، وحسن الخدمة.\n\nشركة شيحة — خبرة تُبنى عليها الثقة، وجودة تلبي احتياجاتك.",
 
             whyUs:
                 "لماذا تختارنا؟",
@@ -127,6 +127,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             syria:
                 "سوريا",
+
+            facebook:
+                "صفحتنا على Facebook",
 
             rights:
                 "جميع الحقوق محفوظة",
@@ -254,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Sheha Company",
 
             aboutText:
-                "SHEHA CO specializes in importing and general trading of sanitary ware and solar energy products. We offer a variety of products, clear prices and direct ordering through WhatsApp.",
+                "Shiha Company — Expertise You Can Trust Since 2008\n\nSince 2008, Shiha Company has been building its experience and reputation in the import and trade of sanitary ware and solar energy solutions, with quality, reliability, and customer satisfaction at the heart of everything we do.\n\nWe are committed to meeting the needs of the market by providing a wide and diverse range of high-quality sanitary products, in addition to solar energy products and solutions. We carefully select reliable products that meet our customers’ expectations and keep pace with the evolving needs of the market.\n\nWith years of experience, strong relationships with trusted suppliers, and a continuous commitment to developing our products and services, we strive to offer the best value for money by combining high quality with competitive prices. This enables our customers to find practical, reliable solutions that meet a wide range of requirements.\n\nAt Shiha Company, we do more than simply provide products. We are committed to building long-term relationships with our customers based on trust, quality, commitment, and excellent service.\n\nShiha Company — Experience You Can Trust, Quality That Meets Your Needs.",
 
             whyUs:
                 "Why Choose Us?",
@@ -297,6 +300,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             syria:
                 "Syria",
+
+            facebook:
+                "Our Facebook Page",
 
             rights:
                 "All rights reserved",
@@ -922,6 +928,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const languageButton =
         document.getElementById("languageButton");
+
+    const aboutSection =
+        document.getElementById("about");
+
+    const aboutLink =
+        document.querySelector('a[href="#about"]');
 
     const categoryButtons =
         document.querySelectorAll(".category");
@@ -1684,8 +1696,73 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
-    year.textContent =
-        new Date().getFullYear();
+
+    // === MOBILE MENU - Responsive Improvement ===
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+    const navOverlay = document.getElementById("navOverlay");
+
+    function openNav(){
+        if(!mainNav) return;
+        mainNav.classList.add("open");
+        if(navOverlay) navOverlay.classList.add("open");
+        if(menuToggle){ menuToggle.classList.add("active"); menuToggle.setAttribute("aria-expanded","true"); }
+        document.body.classList.add("nav-open");
+    }
+    function closeNav(){
+        if(!mainNav) return;
+        mainNav.classList.remove("open");
+        if(navOverlay) navOverlay.classList.remove("open");
+        if(menuToggle){ menuToggle.classList.remove("active"); menuToggle.setAttribute("aria-expanded","false"); }
+        document.body.classList.remove("nav-open");
+    }
+
+    if(menuToggle){
+        menuToggle.addEventListener("click", function(e){
+            e.stopPropagation();
+            if(mainNav.classList.contains("open")) closeNav(); else openNav();
+        });
+    }
+    if(navOverlay){
+        navOverlay.addEventListener("click", closeNav);
+    }
+    // Close nav when clicking any link inside
+    if(mainNav){
+        mainNav.querySelectorAll("a").forEach(a=>{
+            a.addEventListener("click", closeNav);
+        });
+    }
+    // Close nav on resize to desktop
+    window.addEventListener("resize", function(){
+        if(window.innerWidth > 900) closeNav();
+    });
+    // Close nav on ESC
+    document.addEventListener("keydown", function(e){
+        if(e.key === "Escape"){ closeNav(); closeCart(); }
+    });
+
+    
+    year.textContent = new Date().getFullYear().toString();
+
+    if (aboutLink && aboutSection) {
+        aboutLink.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            const isHidden = aboutSection.classList.contains("about-hidden");
+
+            aboutSection.classList.remove("about-hidden");
+            aboutSection.setAttribute("aria-hidden", "false");
+
+            if (isHidden) {
+                setTimeout(() => {
+                    aboutSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }, 60);
+            }
+        });
+    }
 
 
     applyLanguage();

@@ -3,290 +3,104 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="SHEHA CO - استيراد وتجارة عموم الأدوات الصحية والطاقة الشمسية">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="SHEHA CO - استيراد وتجارة عموم الأدوات الصحية والطاقة الشمسية">
     <meta name="theme-color" content="#0877b9">
-
     <title>SHEHA CO | شركة شيحه</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header class="site-header">
-
     <a href="#home" class="brand">
-        <img src="images/logo.jpg"
-             alt="SHEHA CO"
-             class="logo">
+        <img src="images/logo.jpg" alt="SHEHA CO" class="logo">
     </a>
 
-    <nav class="main-nav">
+    <button id="menuToggle" class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
 
-        <a href="#home" data-i18n="home">الرئيسية</a>
-
-        <a href="#products" data-i18n="products">المنتجات</a>
-
-        <a href="#about" data-i18n="about">من نحن</a>
-
-        <a href="#contact" data-i18n="contact">تواصل معنا</a>
-
-        <button
-            class="cart-button"
-            id="openCartButton"
-            type="button">
-
-            🛒
-
-            <span data-i18n="cart">
-                السلة
-            </span>
-
-            <b id="cartCount">0</b>
-
-        </button>
-
-        <button
-            id="languageButton"
-            class="language-button"
-            type="button">
-
-            English
-
-        </button>
-
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-links">
+            <a href="#home" data-i18n="home">الرئيسية</a>
+            <a href="#products" data-i18n="products">المنتجات</a>
+            <a href="#about" data-i18n="about">من نحن</a>
+            <a href="#contact" data-i18n="contact">تواصل معنا</a>
+        </div>
+        <div class="nav-actions">
+            <button class="cart-button" id="openCartButton" type="button">
+                🛒 <span data-i18n="cart">السلة</span> <b id="cartCount">0</b>
+            </button>
+            <button id="languageButton" class="language-button" type="button">English</button>
+        </div>
     </nav>
-
+    <div class="nav-overlay" id="navOverlay"></div>
 </header>
 
 
 <section class="hero" id="home">
-
     <div class="hero-content">
-
-        <div class="hero-brand">
-            SHEHA CO
-        </div>
-
-        <div class="hero-arabic">
-            <span data-i18n="companyName">
-                شركة شيحه
-            </span>
-        </div>
-
-        <h1 data-i18n="heroTitle">
-            استيراد و تجارة عموم الأدوات الصحية و الطاقة الشمسية
-        </h1>
-
-        <p data-i18n="heroText">
-            جودة مناسبة • أسعار واضحة • طلب سريع
-        </p>
-
+        <div class="hero-brand">SHEHA CO</div>
+        <div class="hero-arabic"><span data-i18n="companyName">شركة شيحه</span></div>
+        <h1 data-i18n="heroTitle">استيراد و تجارة عموم الأدوات الصحية و الطاقة الشمسية</h1>
+        <p data-i18n="heroText">جودة مناسبة • أسعار واضحة • طلب سريع</p>
         <div class="hero-buttons">
-
-            <a href="#products"
-               class="button button-light"
-               data-i18n="browseProducts">
-                تصفح المنتجات
-            </a>
-
-            <a
-                href="https://wa.me/963933955690"
-                target="_blank"
-                class="button button-whatsapp"
-                data-i18n="whatsapp">
-                واتساب
-            </a>
-
+            <a href="#products" class="button button-light" data-i18n="browseProducts">تصفح المنتجات</a>
+            <a href="https://wa.me/963933955690" target="_blank" class="button button-whatsapp" data-i18n="whatsapp">واتساب</a>
         </div>
-
     </div>
-
 </section>
 
 
 <section class="features">
-
     <div class="feature-card">
-
         <div class="feature-icon">✓</div>
-
-        <div>
-            <strong data-i18n="feature1Title">
-                منتجات متنوعة
-            </strong>
-
-            <span data-i18n="feature1Text">
-                خيارات متعددة
-            </span>
-        </div>
-
+        <div><strong data-i18n="feature1Title">منتجات متنوعة</strong><span data-i18n="feature1Text">خيارات متعددة</span></div>
     </div>
-
-
     <div class="feature-card">
-
         <div class="feature-icon">$</div>
-
-        <div>
-            <strong data-i18n="feature2Title">
-                أسعار واضحة
-            </strong>
-
-            <span data-i18n="feature2Text">
-                الأسعار بالدولار
-            </span>
-        </div>
-
+        <div><strong data-i18n="feature2Title">أسعار واضحة</strong><span data-i18n="feature2Text">الأسعار بالدولار</span></div>
     </div>
-
-
     <div class="feature-card">
-
         <div class="feature-icon">☎</div>
-
-        <div>
-            <strong data-i18n="feature3Title">
-                طلب عبر واتساب
-            </strong>
-
-            <span data-i18n="feature3Text">
-                تواصل سريع
-            </span>
-        </div>
-
+        <div><strong data-i18n="feature3Title">طلب عبر واتساب</strong><span data-i18n="feature3Text">تواصل سريع</span></div>
     </div>
-
 </section>
 
 
 <section class="products-section" id="products">
-
     <div class="section-title">
-
         <span>SHEHA CO</span>
-
-        <h2 data-i18n="ourProducts">
-            منتجاتنا
-        </h2>
-
-        <p data-i18n="productsText">
-            اختر المنتج وأضفه إلى سلة المشتريات
-        </p>
-
+        <h2 data-i18n="ourProducts">منتجاتنا</h2>
+        <p data-i18n="productsText">اختر المنتج وأضفه إلى سلة المشتريات</p>
     </div>
-
 
     <div class="shop-tools">
-
         <div class="search-box">
-
             <span>🔎</span>
-
-            <input
-                type="search"
-                id="searchInput"
-                data-i18n-placeholder="search"
-                placeholder="ابحث عن منتج..."
-                autocomplete="off">
-
+            <input type="search" id="searchInput" data-i18n-placeholder="search" placeholder="ابحث عن منتج..." autocomplete="off">
         </div>
-
-
         <div class="categories">
-
-            <button
-                class="category active"
-                data-category="all"
-                type="button"
-                data-i18n="all">
-                الكل
-            </button>
-
-            <button
-                class="category"
-                data-category="سكر"
-                type="button"
-                data-i18n="sugar">
-                سكر
-            </button>
-
-            <button
-                class="category"
-                data-category="مضخات"
-                type="button"
-                data-i18n="pumps">
-                مضخات
-            </button>
-
-            <button
-                class="category"
-                data-category="حنفيات"
-                type="button"
-                data-i18n="faucets">
-                حنفيات
-            </button>
-
-            <button
-                class="category"
-                data-category="خلاطات"
-                type="button"
-                data-i18n="mixers">
-                خلاطات
-            </button>
-
-            <button
-                class="category"
-                data-category="أخرى"
-                type="button"
-                data-i18n="other">
-                أخرى
-            </button>
-
+            <button class="category active" data-category="all" type="button" data-i18n="all">الكل</button>
+            <button class="category" data-category="سكر" type="button" data-i18n="sugar">سكر</button>
+            <button class="category" data-category="مضخات" type="button" data-i18n="pumps">مضخات</button>
+            <button class="category" data-category="حنفيات" type="button" data-i18n="faucets">حنفيات</button>
+            <button class="category" data-category="خلاطات" type="button" data-i18n="mixers">خلاطات</button>
+            <button class="category" data-category="أخرى" type="button" data-i18n="other">أخرى</button>
         </div>
-
     </div>
 
-
-    <div
-        class="products-grid"
-        id="productsGrid">
-    </div>
-
-
-    <p
-        id="noResults"
-        class="no-results"
-        hidden
-        data-i18n="noResults">
-
-        لم يتم العثور على منتج مطابق.
-
-    </p>
-
+    <div class="products-grid" id="productsGrid"></div>
+    <p id="noResults" class="no-results" hidden data-i18n="noResults">لم يتم العثور على منتج مطابق.</p>
 </section>
 
 
-<section class="about-section about-hidden" id="about" aria-hidden="true">
-
+<section class="about-section" id="about">
     <div>
-
-        <span class="section-kicker"
-              data-i18n="aboutUs">
-            من نحن
-        </span>
-
-        <h2 data-i18n="aboutTitle">
-            شركة شيحه
-        </h2>
-
-        <p data-i18n="aboutText">
-
-            شركة شيحة — خبرةٌ تمتد منذ عام 2008
+        <span class="section-kicker" data-i18n="aboutUs">من نحن</span>
+        <h2 data-i18n="aboutTitle">شركة شيحه</h2>
+        <p data-i18n="aboutText">شركة شيحة — خبرةٌ تمتد منذ عام 2008
 
 منذ عام 2008، تواصل شركة شيحة مسيرتها في مجال استيراد وتجارة الأدوات الصحية وحلول الطاقة الشمسية، واضعةً الجودة والموثوقية ورضا العملاء في مقدمة أولوياتها.
 
@@ -296,259 +110,112 @@
 
 في شركة شيحة، لا نكتفي بتوفير المنتجات، بل نحرص على بناء علاقات طويلة الأمد مع عملائنا تقوم على الثقة، الجودة، الالتزام، وحسن الخدمة.
 
-شركة شيحة — خبرة تُبنى عليها الثقة، وجودة تلبي احتياجاتك.
-        </p>
-
+شركة شيحة — خبرة تُبنى عليها الثقة، وجودة تلبي احتياجاتك.</p>
     </div>
-
 </section>
 
 
 <section class="why-section">
-
     <div class="section-title">
-
         <span>SHEHA CO</span>
-
-        <h2 data-i18n="whyUs">
-            لماذا تختارنا؟
-        </h2>
-
+        <h2 data-i18n="whyUs">لماذا تختارنا؟</h2>
     </div>
-
-
     <div class="why-grid">
-
-        <div class="why-card">
-
-            <div>✓</div>
-
-            <h3 data-i18n="why1Title">
-                تنوع المنتجات
-            </h3>
-
-            <p data-i18n="why1Text">
-                مجموعة متنوعة من المنتجات.
-            </p>
-
-        </div>
-
-
-        <div class="why-card">
-
-            <div>$</div>
-
-            <h3 data-i18n="why2Title">
-                أسعار واضحة
-            </h3>
-
-            <p data-i18n="why2Text">
-                معرفة سعر المنتج قبل الطلب.
-            </p>
-
-        </div>
-
-
-        <div class="why-card">
-
-            <div>📱</div>
-
-            <h3 data-i18n="why3Title">
-                طلب سهل
-            </h3>
-
-            <p data-i18n="why3Text">
-                اطلب مباشرة عبر واتساب.
-            </p>
-
-        </div>
-
-
-        <div class="why-card">
-
-            <div>⚡</div>
-
-            <h3 data-i18n="why4Title">
-                تواصل سريع
-            </h3>
-
-            <p data-i18n="why4Text">
-                تواصل مباشر مع الشركة.
-            </p>
-
-        </div>
-
+        <div class="why-card"><div>✓</div><h3 data-i18n="why1Title">تنوع المنتجات</h3><p data-i18n="why1Text">مجموعة متنوعة من المنتجات.</p></div>
+        <div class="why-card"><div>$</div><h3 data-i18n="why2Title">أسعار واضحة</h3><p data-i18n="why2Text">معرفة سعر المنتج قبل الطلب.</p></div>
+        <div class="why-card"><div>📱</div><h3 data-i18n="why3Title">طلب سهل</h3><p data-i18n="why3Text">اطلب مباشرة عبر واتساب.</p></div>
+        <div class="why-card"><div>⚡</div><h3 data-i18n="why4Title">تواصل سريع</h3><p data-i18n="why4Text">تواصل مباشر مع الشركة.</p></div>
     </div>
-
 </section>
 
 
-<section class="contact-section" id="contact">
 
-    <div class="contact-card">
-
-        <span class="section-kicker"
-              data-i18n="contactUs">
-            تواصل معنا
-        </span>
-
-        <h2 data-i18n="contactTitle">
-            هل لديك استفسار؟
-        </h2>
-
-        <p data-i18n="contactText">
-            أرسل لنا اسم المنتج أو طلبك.
-        </p>
-
-        <a
-            href="https://wa.me/963933955690"
-            target="_blank"
-            class="big-whatsapp"
-            data-i18n="contactWhatsapp">
-
-            تواصل معنا عبر واتساب
-
-        </a>
-
-        <p class="phone">
-            <a href="tel:+963122213441">00963 122213441</a>
-        </p>
-
-        <p class="contact-link">
-            <a href="https://www.facebook.com/share/1FXjcCLHZr/" target="_blank" rel="noopener" data-i18n="facebook">
-                Facebook
-            </a>
-        </p>
-
-    </div>
-
+<section class="contact-section-new" id="contact">
+<div class="contact-new-header">
+<span class="contact-kicker">تواصل معنا</span>
+<h2>يسعدنا تواصلكم معنا</h2>
+<p>نحن في خدمتكم للإجابة عن استفساراتكم وتلبية احتياجاتكم.</p>
+</div>
+<div class="contact-new-grid">
+<a data-fb="true" target="_blank" rel="noopener" class="contact-new-card">
+<div class="contact-new-main">
+<div class="contact-new-icon facebook-icon">f</div>
+<div class="contact-new-info">
+<strong style="color:#1877F2">Facebook</strong>
+<span>صفحة شركة شيحة</span>
+</div>
+</div>
+</a>
+<a href="https://wa.me/963933955690" target="_blank" rel="noopener" class="contact-new-card">
+<div class="contact-new-main">
+<div class="contact-new-icon whatsapp-icon">W</div>
+<div class="contact-new-info">
+<strong style="color:#0a7c3e">WhatsApp</strong>
+<span>تواصل معنا عبر واتساب</span>
+</div>
+</div>
+</a>
+<a href="mailto:sheha.t.co@gmail.com" class="contact-new-card">
+<div class="contact-new-main">
+<div class="contact-new-icon email-icon">@</div>
+<div class="contact-new-info">
+<strong>البريد الإلكتروني</strong>
+<span dir="ltr">sheha.t.co@gmail.com</span>
+</div>
+</div>
+</a>
+<a href="tel:+963122213441" class="contact-new-card">
+<div class="contact-new-main">
+<div class="contact-new-icon phone-icon">☎</div>
+<div class="contact-new-info">
+<strong>الهاتف الأرضي</strong>
+<span dir="ltr">00963 122213441</span>
+</div>
+</div>
+</a>
+<a href="https://maps.app.goo.gl/ZK2BKXSmECce5uFQ8?g_st=aw" target="_blank" rel="noopener" class="contact-new-card location-card">
+<div class="contact-new-main">
+<div class="contact-new-icon location-icon">📍</div>
+<div class="contact-new-info">
+<strong>موقعنا على الخريطة</strong>
+<span>سوريا - حمص - شارع الوادي</span>
+</div>
+</div>
+<div class="location-arrow">←</div>
+</a>
+</div>
 </section>
+
 
 
 <footer>
-
     <h3>SHEHA CO</h3>
-
-    <p data-i18n="companyName">
-        شركة شيحه
-    </p>
-
-    <p data-i18n="syria">
-        سوريا
-    </p>
-
-    <p>
-        <a href="tel:+963122213441">00963 122213441</a>
-    </p>
-
-    <p>
-        <a href="https://www.facebook.com/share/1FXjcCLHZr/" target="_blank" rel="noopener" data-i18n="facebook">Facebook</a>
-    </p>
-
-    <p>
-        © <span id="year"></span>
-        SHEHA CO -
-        <span data-i18n="rights">
-            جميع الحقوق محفوظة
-        </span>
-    </p>
-
+    <p data-i18n="companyName">شركة شيحه</p>
+    <p data-i18n="syria">سوريا</p>
+    <p><a href="tel:+963122213441">00963 122213441</a></p>
+    <p><a href="https://www.facebook.com/share/1FXjcCLHZr/" target="_blank" rel="noopener" data-i18n="facebook">Facebook</a></p>
+    <p>© <span id="year"></span> SHEHA CO - <span data-i18n="rights">جميع الحقوق محفوظة</span></p>
 </footer>
 
 
-<a
-    class="floating-whatsapp"
-    href="https://wa.me/963933955690"
-    target="_blank"
-    aria-label="WhatsApp"
-    data-i18n="whatsapp">
-    واتساب
-</a>
-
+<a class="floating-whatsapp" href="https://wa.me/963933955690" target="_blank" aria-label="WhatsApp" data-i18n="whatsapp">واتساب</a>
 
 <div class="cart-overlay" id="cartOverlay">
-
     <div class="cart-panel">
-
         <div class="cart-header">
-
-            <h2 data-i18n="cartTitle">
-                سلة المشتريات
-            </h2>
-
-            <button
-                id="closeCartButton"
-                class="close-cart"
-                type="button">
-                ×
-            </button>
-
+            <h2 data-i18n="cartTitle">سلة المشتريات</h2>
+            <button id="closeCartButton" class="close-cart" type="button">×</button>
         </div>
-
-
-        <div
-            id="cartItems"
-            class="cart-items">
-        </div>
-
-
-        <div
-            id="emptyCart"
-            class="empty-cart"
-            data-i18n="emptyCart">
-
-            السلة فارغة حاليًا.
-
-        </div>
-
-
+        <div id="cartItems" class="cart-items"></div>
+        <div id="emptyCart" class="empty-cart" data-i18n="emptyCart">السلة فارغة حاليًا.</div>
         <div class="cart-footer">
-
-            <div class="cart-total">
-
-                <span data-i18n="total">
-                    الإجمالي
-                </span>
-
-                <strong>
-                    $
-                    <span id="cartTotal">
-                        0.00
-                    </span>
-                </strong>
-
-            </div>
-
-
-            <button
-                id="whatsappCartButton"
-                class="checkout-button"
-                type="button"
-                data-i18n="sendOrder">
-
-                إرسال الطلب عبر واتساب
-
-            </button>
-
-
-            <button
-                id="clearCartButton"
-                class="clear-button"
-                type="button"
-                data-i18n="clearCart">
-
-                تفريغ السلة
-
-            </button>
-
+            <div class="cart-total"><span data-i18n="total">الإجمالي</span><strong>$ <span id="cartTotal">0.00</span></strong></div>
+            <button id="whatsappCartButton" class="checkout-button" type="button" data-i18n="sendOrder">إرسال الطلب عبر واتساب</button>
+            <button id="clearCartButton" class="clear-button" type="button" data-i18n="clearCart">تفريغ السلة</button>
         </div>
-
     </div>
-
 </div>
 
-
 <script src="script.js"></script>
-
 </body>
 </html>
