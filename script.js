@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
             all:
                 "الكل",
 
-            Valve:
+            valve:
                 "سكر",
 
             pumps:
