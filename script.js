@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
             all:
                 "الكل",
 
-            sugar:
+            Valve:
                 "سكر",
 
             pumps:
@@ -232,8 +232,8 @@ document.addEventListener("DOMContentLoaded", function () {
             all:
                 "All",
 
-            sugar:
-                "Sugar",
+            Valve:
+                "Valve",
 
             pumps:
                 "Pumps",
@@ -374,7 +374,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             id: 3,
             name: "كاسر ضغط",
-            nameEn: "Crystal Plastic Faucet",
+            nameEn: "Pressure reducer",
             price: 0.75,
             category: "طاقة شمسية",
             categoryEn: "Faucets",
