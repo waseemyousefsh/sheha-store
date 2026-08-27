@@ -319,3 +319,18 @@ html[dir="rtl"] .cart-panel{transform:translateX(-100%);}
     .product-bottom strong{text-align:center;}
     .add-to-cart{width:100%; min-height:42px;}
 }
+
+.about-section{
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  max-width:900px;
+  margin:40px auto;
+  padding:40px 25px;
+  background:white;
+  border:1px solid #dceaf2;
+  border-radius:16px;
+}
+.about-hidden{
+  display:block !important;
+}
